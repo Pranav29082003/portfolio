@@ -1,0 +1,133 @@
+/* ==========================================================================
+   1. TABLET BREAKPOINT (Max-width: 992px)
+   ========================================================================== */
+@media screen and (max-width: 992px) {
+    section {
+        padding: 60px 5%; /* Shrink horizontal margins to give content more room */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Scale down oversized hero headings */
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly narrower column minimums */
+        gap: 20px;
+    }
+}
+
+/* ==========================================================================
+   2. MOBILE LANDSCAPE & SMALL TABLETS (Max-width: 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Navbar Adjustment */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    /* Hero Section Realignment */
+    .hero-section {
+        text-align: center;
+        min-height: auto;
+        padding-top: 140px; /* Extra room so fixed header doesn't clip content */
+        padding-bottom: 60px;
+    }
+
+    .hero-content h2::after {
+        display: block; /* Centered underline helper for hero text when mobile-aligned */
+        content: '';
+        width: 40px;
+        height: 3px;
+        background: var(--accent-color);
+        margin: 10px auto 0 auto;
+    }
+
+    .hero-cta {
+        justify-content: center; /* Center the buttons on mobile */
+    }
+
+    /* Skills Grid Configuration */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Pack smaller cards tighter */
+        gap: 15px;
+    }
+
+    /* Form spacing adjustment */
+    #contact-form {
+        padding: 25px 20px;
+    }
+
+    /* Force the layout to stack vertically */
+    .hero-container {
+        flex-direction: column-reverse; /* Puts image above or below text as preferred */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content h2 {
+        text-align: center;
+    }
+
+    .hero-content h2::after {
+        display: block;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background: var(--accent-color);
+        margin: 10px auto 0 auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   3. SMALL SMARTPHONES (Max-width: 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-cta {
+        flex-direction: column; /* Stack primary and secondary CTA buttons vertically */
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Make section titles readable on ultra-narrow screens */
+    }
+    
+    .project-info p {
+        height: auto; /* Allow description boxes to grow rather than forcing overflow truncation */
+        margin-bottom: 15px;
+    }
+}

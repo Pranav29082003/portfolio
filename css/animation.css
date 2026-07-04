@@ -1,0 +1,91 @@
+/* ==========================================================================
+   1. KEYFRAME DEFINITIONS
+   ========================================================================== */
+
+/* Fade in and slide up slightly */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth fade in only */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Subtle pulse effect for primary CTA buttons */
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 119, 182, 0.1);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 119, 182, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 119, 182, 0.1);
+    }
+}
+
+/* ==========================================================================
+   2. ANIMATION APPLICATION CLASSES
+   ========================================================================== */
+
+/* Apply this class to the hero elements in index.html for a clean entry */
+.hero-content h1 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-content h2 {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0; /* Keeps it hidden until the animation delay starts */
+}
+
+.hero-content p {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+/* Adds attention to your primary project/resume button */
+.primary-btn {
+    animation: subtlePulse 3s infinite ease-in-out;
+}
+
+/* Apply this via JavaScript or globally to reveal sections as you scroll */
+.about-section, 
+.projects-section, 
+.certificates-section, 
+.contact-section {
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* ==========================================================================
+   3. ACCESSIBILITY (Respect User Preferences)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-delay: 0s !important;
+        animation-duration: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important;
+    }
+}
