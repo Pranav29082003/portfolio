@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    
+    <!-- Link to CSS stylesheets as per structure.PNG -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">PranavInsights</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section (Handled by typing.js) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Pranav Ghodke</span></h1>
+                <!-- typing.js will target this span for the typing animation -->
+                <h2>I specialize in <span id="typing-text"></span></h2>
+                <p>Turning complex datasets into actionable business insights through Excel, SQL, Python, and BI tools.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="assets/resume/Pranav_DataAnalyst_resume.pdf" class="btn secondary-btn" download>Download Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+            <img src="assets/images/backgrnd-img.png" alt="Data Analyst Character Illustrating Insights">
+        </div>
+    </div>
+</section>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <p>I am an aspiring Data Analyst and M.Sc. Data Science & AI graduate passionate about transforming complex data into actionable business insights. 
+                    My expertise includes SQL, Python, Power BI, Excel and Data visualization. 
+                    I have developed interactive dashboards, analyzed datasets and published a research paper. 
+                    I am eager to begin my professional journey where I can apply my analytical skills, solve real-world business problems, and contribute to data-driven decision-making while continuously learning and growing</p>
+                
+                <h3>Technical Stack</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/icons/sql.jpg" alt="SQL"> SQL</div>
+                    <div class="skill-card"><img src="assets/icons/python.png" alt="Python"> Python (Pandas/NumPy)</div>
+                    <div class="skill-card"><img src="assets/icons/powerbi.png" alt="Power BI"> Power BI</div>
+                    <div class="skill-card"><img src="assets/icons/excel.jpg" alt="Excel"> Advanced Excel</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Populated dynamically via projects.js or static HTML) -->
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <!-- This container can be targeted by projects.js to inject your case studies -->
+            <div id="projects-container" class="projects-grid">
+                
+                <!-- Sample Static Project Box -->
+                <div class="project-card">
+                    <img src="assets/images/project1_thumbnail.png" alt="E-commerce Analysis Thumbnail" class="project-img">
+                    <div class="project-info">
+                        <h3>E-Commerce Customer Churn Analysis</h3>
+                        <p>An end-to-end project analyzing user behavior trends to identify key factors leading to cart abandonment and subscription churn.</p>
+                        <span class="tech-tag">Python</span> <span class="tech-tag">SQL</span> <span class="tech-tag">Tableau</span>
+                        <div class="project-links">
+                            <a href="#" class="view-project">Case Study</a>
+                            <a href="https://github.com" target="_blank" class="github-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates-section">
+            <h2>Certifications</h2>
+            <div class="certificates-grid">
+                <div class="cert-card">
+                    <img src="assets/certificates/dataanalytics.PNG" alt="NPTEL Data Analytics Certificate">
+                    <h4>NPTEL Data Analytics with Python Certificate</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Handled by contact.js) -->
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <p><center>Have an interesting project or an open role? Let's connect!</center></p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pranav Ghodke. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files linked exactly as seen in structure.PNG -->
+    <script src="js/typing.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
